@@ -1,0 +1,31 @@
+npm init
+npm i express
+npm i mongodb
+add "type": "module" in package.json for import & export instead of 'require'
+
+npm i nodemon - or - npm install -g nodemon
+add "start": "nodemon index.js" in package.json
+automatically starts/restarts the server after save changes
+type 'npm start' to run
+
+vercel.json file for deploying the node server in 'vercel.com'
+"src":"./index.js" - give the main file to be run
+"use":"@vercel/node" - give the file must be run with node
+"src":"/(.*)" - can be routed to any paths
+"dest":"/index.js" - from main/source folder
+while deploying in vercel.com through github remember to enter 'PORT', '9000' in Environment Variables & Deploy
+
+npm i dotenv      for secret values like port, connection link/URL of mongoDB
+set variable for the data inside the created .env file
+used to hide the .env file in .gitignore while pushing in github
+import dotenv & configure it
+set every value with process.env eg:- const PORT = process.env.PORT
+
+packages for authentication & authorization
+npm i jsonwebtoken
+npm i bcrypt - modified to - npm i bcryptjs
+
+npm i cors 
+for connecting two different ports that is react in one port & node in another port
+
+nodemailer - for forget password & resetting
